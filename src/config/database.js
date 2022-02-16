@@ -1,9 +1,9 @@
 module.exports = {
     dialect: 'mysql',
-    host: process.env.DB_HOST || 'localhost',
-    username: process.env.DB_USER_NAME || 'root',
-    password: process.env.DB_PASSWORD || 'admin',
-    database: process.env.DB_NAME || 'fitvlogger',
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER_NAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     port: 3306,
     define: {
       timestamps: true,
