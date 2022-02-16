@@ -21,7 +21,7 @@ class UserInfluencerController {
       ok: true,
     });
   }
-  async ready(request, response) {
+  async show(request, response) {
     try {
       const { user_cpf } = request.query;
       await createInfluencer().validate(request.query);

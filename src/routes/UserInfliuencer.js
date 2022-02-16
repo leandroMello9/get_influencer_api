@@ -5,6 +5,6 @@ const { auth } = require("../middlewares/auth")
 const usersInfluencerRoutes = Router();
 usersInfluencerRoutes.use(auth)
 usersInfluencerRoutes.post("", UserInfluencerController.store)
-usersInfluencerRoutes.get("", UserInfluencerController.ready)
+usersInfluencerRoutes.get("", UserInfluencerController.show)
 
 module.exports = usersInfluencerRoutes
