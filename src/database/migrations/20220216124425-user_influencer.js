@@ -12,6 +12,7 @@ module.exports = {
       cpf: {
         allowNull: false,
         type: Sequelize.STRING,
+        unique: true,
       },
       created_at: {
         allowNull: false,
@@ -20,7 +21,6 @@ module.exports = {
       updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
-        
       },
     });
   },
@@ -32,6 +32,10 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    return queryInterface.bulkDelete("db_fitvlooger_users_influencer", null, {});
+    return queryInterface.bulkDelete(
+      "db_fitvlooger_users_influencer",
+      null,
+      {}
+    );
   },
 };
