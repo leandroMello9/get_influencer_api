@@ -17,7 +17,7 @@ class Database {
         model.init(this.connection);
       });
     } catch (err) {
-      console.log("error connect database");
+      console.log("error connect database", err);
     }
   }
 }

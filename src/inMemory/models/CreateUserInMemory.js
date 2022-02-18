@@ -1,10 +1,9 @@
-
 class CreateUserInMemory {
-  constructor(id, cpf) {
+  constructor({ id, cpf }) {
     this.id = id;
     this.cpf = cpf;
+    return this;
   }
-
 }
 
-module.exports = CreateUserInMemory();
+module.exports = CreateUserInMemory;

@@ -26,12 +26,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    /*
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
     return queryInterface.bulkDelete(
       "db_fitvlooger_users_influencer",
       null,
