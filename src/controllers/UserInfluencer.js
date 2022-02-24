@@ -1,6 +1,7 @@
 const UserInfluencerService = require("../services/CreateUseInfuencer");
 const GetUserService = require("../services/GetUserInfluencer");
 const { createInfluencer } = require("../validators/UserInfluencer");
+const expectError = require("../utils/Error");
 class UserInfluencerController {
   async store(request, response) {
     try {
@@ -11,8 +12,9 @@ class UserInfluencerController {
       });
       return response.status(201).json(user);
     } catch (err) {
-      return response.status(404).json({
-        message: err.message,
+      const { message, status } = expectError(err);
+      return response.status(status).json({
+        message,
       });
     }
   }
@@ -30,8 +32,9 @@ class UserInfluencerController {
       });
       return response.status(200).json(user);
     } catch (err) {
-      return response.status(404).json({
-        message: err.message,
+      const { message, status } = expectError(err);
+      return response.status(status).json({
+        message,
       });
     }
   }

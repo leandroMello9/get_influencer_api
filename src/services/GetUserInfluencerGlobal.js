@@ -8,7 +8,7 @@ class GetUserInfluencer {
         );
 
         if (!data) {
-          reject();
+          resolve(null);
         }
         resolve(data);
       } catch (err) {

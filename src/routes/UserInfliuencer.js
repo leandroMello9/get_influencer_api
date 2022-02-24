@@ -5,8 +5,9 @@ const { auth } = require("../middlewares/auth");
 const { authGlobal } = require("../middlewares/authGlobal");
 const usersInfluencerRoutes = Router();
 usersInfluencerRoutes.use(auth);
-usersInfluencerRoutes.use(authGlobal);
 usersInfluencerRoutes.post("", UserInfluencerController.store);
+usersInfluencerRoutes.use(authGlobal);
+
 usersInfluencerRoutes.get("", UserInfluencerController.show);
 usersInfluencerRoutes.get("/getGlobal", getAndCreateController.show);
 

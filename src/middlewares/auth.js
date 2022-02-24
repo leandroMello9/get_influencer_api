@@ -1,5 +1,5 @@
 function auth(request, response, next) {
-  const token = process.env.APP_TOKEN
+  const token = process.env.SECRET_MS_INFLUENCER_APP_TOKEN
   const tokenReciveid = request.headers["app-token"];
   if(!tokenReciveid || tokenReciveid === "") {
     return response.status(401).json({

@@ -8,7 +8,8 @@ class GetUserInfluencer {
           where: { cpf: user_cpf },
         });
         if (!userExist) {
-          throw new Error("User isn't exist in database");
+          resolve(null)
+
         }
 
         resolve(userExist);

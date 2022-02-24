@@ -6,7 +6,7 @@ module.exports = {
       user_cpf: Yup.string()
         .required("CPF is required")
         .min(11, "Number that cpf have min 11 caracters")
-        .max(14, "Number that cpf have min 14 caracters"),
+        .max(11, "Number that cpf have max 11 caracters"),
     });
   },
 };

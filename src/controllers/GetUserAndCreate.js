@@ -26,9 +26,9 @@ class UserInfluencerController {
           });
         }
         const { uuid } = userGlobal;
-        const response = await apiAuth.patch(`users/${uuid}/groups`, {
+        await apiAuth.patch(`users/${uuid}/groups`, {
           action: "ADD",
-          groups: ["INFLUENCER"],
+          groups: ["INFLUENCER_FITVLOGGER"],
         });
         return response.status(200).json({
           message: "Usuário marcado como influencer",
@@ -38,7 +38,7 @@ class UserInfluencerController {
       return response.status(200).json(user);
     } catch (err) {
       return response.status(404).json({
-        message: err.message,
+        message: err,
       });
     }
   }
